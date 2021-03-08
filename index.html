@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimilarSearch</title>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="add">
+            <i class="far fa-compass"></i>
+        </div>
+        <div class="search">
+            <div class="inner">
+                <form>
+                    <input id="search" type="text" placeholder="Search..." autocomplete="off" spellcheck="false">
+                </form>
+                <div class="results"></div>
+            </div>
+            <div class="scroll">
+                <img src="assets/scroll.png" alt="">
+                <p>Scroll Down</p>
+            </div>
+        </div>
+    </header>
+    <div class="cities-overlay">
+        <div class="cities-modal">
+            <h2>Your Cities</h2>
+            <div class="city-add">
+                <input id="city" type="text" placeholder="City">
+                <input id="population" type="number" placeholder="Population">
+                <button id="addCity">Sumbit</button>
+            </div>
+            <div class="city-list">
+                <table>
+                    <tr>
+                        <th>City</th>
+                        <th>Population</th>
+                        <th>Action</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="overlay">
+        <div class="similar">
+            <div class="similar-header">
+                <h2>Similiar movies to <span id="searchName">Movie</span></h2>
+                <p>We found <span id="similarAmount">0</span> similar movies!</p>
+            </div>
+            <div class="similar-body"></div>
+            <div class="similar-footer">
+                <div class="load">Load More</div>
+                <p> or <span id="newSearch">New Search</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="compareOverlay">
+        <div class="compare">
+            <h2>Movie Rating Comparison</h2>
+            <canvas id="chart" width="570" height="285"></canvas>
+        </div>
+    </div>
+    <main>
+        <div class="saves">
+            <div class="bookmarked">
+                <div class="title">
+                    <h2>Bookmarked</h2>
+                </div>
+                <div class="body"></div>
+            </div>
+            <div class="history">
+                <div class="title">
+                    <h2>History</h2>
+                </div>
+                <div class="body"></div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
